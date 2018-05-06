@@ -1,0 +1,28 @@
+
+
+<button (click)="goToBookCreate()" mat-raised-button color="primary">Add a Book</button>
+<div class="card-container">
+  <mat-card class="book-card" *ngFor="let book of myArr">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Title: {{book.title}}</mat-card-title>
+      <mat-card-subtitle>Genre: {{book.genre}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>Written by: {{book.author}}</p>
+      <p>
+        The Shiba Inu is the smallest.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button class="btn-card" mat-raised-button color="primary" (click)="remove(book._id)">
+          <mat-icon>clear</mat-icon>
+        </button>
+        <button class="btn-card" mat-raised-button color="primary" (click)="update(book)">
+          <mat-icon>autorenew</mat-icon>
+        </button>
+
+    </mat-card-actions>
+  </mat-card>
+</div>

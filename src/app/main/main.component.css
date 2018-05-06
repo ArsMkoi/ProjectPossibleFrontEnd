@@ -1,0 +1,19 @@
+
+.red{
+    color:red;
+}
+.card-container {
+    width:100%;
+}
+.book-card {
+    width:18%;
+    float:left;
+    margin-right:1%;
+}
+.book-card:last-child {
+    margin-right:0%;
+}
+.btn-card {
+    float:left !important;
+    max-width:50px !important;
+}

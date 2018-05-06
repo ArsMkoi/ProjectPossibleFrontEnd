@@ -1,0 +1,23 @@
+<div class="book-create-container">
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Title" value="Sushi" [(ngModel)]="newRecord.title">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Genre" [(ngModel)]="newRecord.genre"></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Author" [(ngModel)]="newRecord.author">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Leave a comment"></textarea>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+<button (click)="addRecord(newRecord)" mat-raised-button color="primary">{{newRecord._id ? 'Update Record' : 'Add Record'}}</button>
